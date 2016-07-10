@@ -118,6 +118,11 @@ section{
   transition: .25s linear;
 }
 
+.logo{
+  width: auto;
+  height: 3rem;
+  margin-left: 2rem;
+}
 
 .our-team{
   background-color: $faded-white;
@@ -184,10 +189,10 @@ section{
 
 }
 
-// .menu-icon.hamburger-button {
-// 	display: none !important;
-//
-// }
+.menu-icon.hamburger-button {
+	display: none !important;
+
+}
 
 .hamburger-button:after
 {
