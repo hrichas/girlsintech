@@ -48,3 +48,162 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import "variable";
+
+
+body {
+  font-family: 'Lato' !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, button, a, span {
+  font-family: 'Lato' !important;
+}
+
+section{
+  padding: 2rem 0;
+}
+.light {
+  font-weight: 300;
+}
+
+.brand-color{
+  color: $brand-color;
+}
+.white{
+  color: #ffffff;
+}
+
+.top-bar .top-bar-right ul {
+  background: transparent;
+}
+.top-bar {
+  .top-bar-right ul li{
+    padding: 1.1rem 1.5rem;
+    background-color: transparent;
+  }
+  background-color: transparent;
+  // border-bottom: 1px solid #eeeeee;
+  position : fixed ;
+  z-index : 999 ;
+  width: 100%;
+
+}
+
+.top-bar-right {
+  ul li a {
+    color: white;
+    &.active {
+      font-weight: bold;
+    }
+    &:hover {
+      color: #F5F6F7;
+    }
+  }
+}
+
+.top-bar-right ul li a {
+  position: relative;
+  padding: 0;
+}
+
+.top-bar-right ul li a.active:before {
+  content: '';
+  width: 120%;
+  height: 2px;
+  // background: #ec5840;
+  bottom: rem-calc(-26px);
+  left: -10%;
+  position: absolute;
+  transition: .25s linear;
+}
+
+
+.our-team{
+  background-color: $faded-white;
+
+}
+
+.events{
+  background-color: $brand-color;
+    h3{
+      text-transform: uppercase;
+    }
+}
+#hero-image {
+  background-image: url("../img/hero_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
+}
+#pitch-wrapper {
+  display: table;
+  width: 100%;
+  height: inherit;
+  // background-color: $brand-color;
+  // opacity: 0.7;
+}
+#hero-pitch {
+  display: table-cell;
+  color: $white;
+  vertical-align: middle;
+
+  h2 {
+    font-size: 56px;
+  }
+  h5.pitch-line {
+      font-style: italic;
+      font-family: "Merriweather" !important;
+  }
+  a.button {
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    font-size: 18px;
+    margin-top: 4rem;
+  }
+}
+
+.callout-wrapper {
+  margin-top: 1rem;
+}
+#what-we-do {
+
+  .callout {
+    padding: 2rem 5rem 1rem;
+    border: 0;
+    color: $brand-color;
+
+    p {
+      margin-top: 1rem;
+    }
+  }
+
+}
+
+// .menu-icon.hamburger-button {
+// 	display: none !important;
+//
+// }
+
+.hamburger-button:after
+{
+  background: white;
+  box-shadow: 0 7px 0 white, 0 14px 0 white;
+ }
+
+ .off-canvas{
+   background: white;
+   color: $white;
+ }
+
+@media screen and (max-width: 768px) {
+  #what-we-do{
+    .callout{
+      padding: 2rem 2rem 1rem;
+    }
+  }
+}
