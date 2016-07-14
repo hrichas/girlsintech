@@ -60,9 +60,6 @@ h1, h2, h3, h4, h5, h6, p, button, a, span {
   font-family: 'Lato' !important;
 }
 
-section{
-  padding: 2rem 0;
-}
 .light {
   font-weight: 300;
 }
@@ -73,11 +70,22 @@ section{
 .white{
   color: #ffffff;
 }
+.black{
+  color: $faded-black;
+}
+
+.grey{
+  color: $grey;
+}
 
 .top-bar .top-bar-right ul {
   background: transparent;
 }
 .top-bar {
+  &.white{
+    background: white;
+    box-shadow: 0px 0px 8px #ccc;
+  }
   .top-bar-right ul li{
     padding: 1.1rem 1.5rem;
     background-color: transparent;
@@ -131,25 +139,21 @@ section{
 
 .events{
   background-color: $brand-color;
-    h3{
-      text-transform: uppercase;
-    }
 }
-#hero-image {
+
+.hero-image {
   background-image: url("../img/hero_image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 80vh;
+  height: 95vh;
 }
-#pitch-wrapper {
+.pitch-wrapper {
   display: table;
   width: 100%;
   height: inherit;
-  // background-color: $brand-color;
-  // opacity: 0.7;
 }
-#hero-pitch {
+.hero-pitch {
   display: table-cell;
   color: $white;
   vertical-align: middle;
@@ -181,6 +185,9 @@ section{
     padding: 2rem 5rem 1rem;
     border: 0;
     color: $brand-color;
+    img{
+      margin-bottom: 1.5rem;
+    }
 
     p {
       margin-top: 1rem;
@@ -189,9 +196,114 @@ section{
 
 }
 
-.menu-icon.hamburger-button {
-	display: none !important;
+.members-wrapper{
+  margin-bottom: 2.5rem;
+  img{
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+  }
+  p{
+    font-family: "Merriweather" !important;
+    font-style: italic;
+    font-weight: 300;
+  }
+  h6{
+    margin-bottom: 0;
+  }
+}
 
+section {
+  padding: 4rem 0;
+ & > h3{
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+ }
+}
+
+.contactus{
+  background: $faded-white;
+}
+
+.button-size{
+  background-color: $brand-color;
+  width: 158px;
+  height: 56px;
+}
+
+
+
+button.testimonial-button{
+  width: 96px;
+  height: 96px;
+  border: solid 3px #ffffff;
+  img{
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+}
+
+p.testimony {
+  position: relative;
+}
+.testimonial-icon-left{
+  position: absolute;
+  top: 0;
+  left: -40px;
+}
+
+.testimonial-icon-right{
+  position: absolute;
+  top: 0;
+  right: -40px;
+}
+
+.orbit-bullets button.is-active.testimonial-button{
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
+
+  img {
+    opacity: 1;
+  }
+
+}
+
+button.orbit-previous, button.orbit-next{
+  display: none;
+}
+.event-margin{
+  margin-bottom: 0.75rem;
+}
+.event-logo{
+  height: 72px;
+  padding-bottom: 0.75rem;
+}
+.footer-icon{
+  margin-right: 1rem;
+}
+.event-icon{
+  margin-right: 0.5rem;
+}
+.footer{
+  background-color: $brand-color;
+  color: white;
+
+}
+.input-group input{
+  // width: 620px;
+  height: 56px;
+  border-radius: 4px 0 0 4px !important;
+  background-color: #ffffff;
+}
+.input-group-button button {
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.menu-icon.hamburger-button {
+	display: none;
 }
 
 .hamburger-button:after
@@ -203,12 +315,60 @@ section{
  .off-canvas{
    background: white;
    color: $white;
+   &.is-open ul li a {
+     color: $brand-color;
+   }
  }
+.button:hover, .button:focus {
+  background-color: #c65c5c;
+}
 
+@media screen and ( max-width: 780px) {
+  .top-bar-right, .top-bar-left {
+    width: auto !important;
+  }
+  .top-bar-right .main-menu {
+    display: none;
+  }
+
+  .menu-icon.hamburger-button {
+  	display: inline-block;
+    margin: 1rem 2rem 0 0;
+  }
+
+  .top-bar.white .menu-icon.hamburger-button:after {
+    background: $brand-color;
+    box-shadow: 0 7px 0 $brand-color, 0 14px 0 $brand-color;
+  }
+}
 @media screen and (max-width: 768px) {
   #what-we-do{
     .callout{
       padding: 2rem 2rem 1rem;
     }
   }
+  .hero-image {
+    height: 70vw;
+  }
+
+.hero-pitch a.button{
+  margin-top: 1rem;
+  font-size: 3.5vw;
+  padding: 0.5rem;
+
+
+}
+
+  .hero-pitch{
+    h2{
+      font-size: 5.5vw;
+      font-weight: 300;
+    }
+  }
+  .hero-pitch h5.pitch-line{
+    font-size : 3.5vw;
+  }
+
+
+
 }
