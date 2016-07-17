@@ -1,8 +1,11 @@
+
 @charset 'utf-8';
 
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+
+
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -236,11 +239,35 @@ section {
 button.testimonial-button{
   width: 96px;
   height: 96px;
-  border: solid 3px #ffffff;
-  img{
+  // border: solid 3px #ffffff;
+
+  img {
     border-radius: 50%;
     opacity: 0.4;
+
+
   }
+  .user-post {
+      display: none;
+      margin-top: 1rem;
+
+      span:first-of-type {
+        display: block;
+        color: $grey;
+      }
+      span:nth-child(2) {
+        margin-top: 0.4rem;
+        font-family: "Merriweather";
+        color: $brand-color;
+        font-style: italic;
+      }
+    }
+    &.is-active {
+      .user-post {
+        display: block;
+      }
+    }
+
 }
 
 p.testimony {
@@ -265,6 +292,7 @@ p.testimony {
 
   img {
     opacity: 1;
+
   }
 
 }
@@ -295,6 +323,10 @@ button.orbit-previous, button.orbit-next{
   height: 56px;
   border-radius: 4px 0 0 4px !important;
   background-color: #ffffff;
+  &:focus {
+    border-color: white;
+    box-shadow: 0px 0px 8px #ccc;
+  }
 }
 .input-group-button button {
   font-size: 16px;
