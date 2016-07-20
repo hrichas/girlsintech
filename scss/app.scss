@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, p, button, a, span {
       font-style: italic;
       font-family: "Merriweather" !important;
   }
-  a.button {
+  a.cta-button {
     color: #ffffff;
     background-color: transparent;
     border: 1px solid #FFFFFF;
@@ -176,6 +176,10 @@ h1, h2, h3, h4, h5, h6, p, button, a, span {
     padding: 1rem 2rem;
     font-size: 18px;
     margin-top: 4rem;
+    &:hover {
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+    }
   }
 }
 
@@ -234,12 +238,11 @@ section {
   height: 56px;
 }
 
-
-
 button.testimonial-button{
   width: 96px;
   height: 96px;
-  // border: solid 3px #ffffff;
+  border: solid 3px #ffffff;
+  margin-bottom: 2rem;
 
   img {
     border-radius: 50%;
@@ -383,24 +386,21 @@ button.orbit-previous, button.orbit-next{
     height: 70vw;
   }
 
-.hero-pitch a.button{
-  margin-top: 1rem;
-  font-size: 3.5vw;
-  padding: 0.5rem;
-
-
-}
-
-  .hero-pitch{
-    h2{
-      font-size: 5.5vw;
-      font-weight: 300;
-    }
+.hero-pitch {
+  a.cta-button{
+    margin-top: 1rem;
+    font-size: 18px;
+    padding: 0.8rem 1.2rem;
   }
-  .hero-pitch h5.pitch-line{
+
+  h2{
+    font-size: 5.5vw;
+    font-weight: 300;
+  }
+
+  h5.pitch-line{
     font-size : 3.5vw;
   }
-
-
+}
 
 }
