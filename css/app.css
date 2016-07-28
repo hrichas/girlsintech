@@ -5377,6 +5377,7 @@ h1, h2, h3, h4, h5, h6, p, button, a, span {
 .top-bar.white {
   background: white;
   box-shadow: 0px 0px 8px #ccc;
+  transition: background 500ms;
 }
 
 .top-bar .top-bar-right ul li {
